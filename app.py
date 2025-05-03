@@ -53,7 +53,6 @@ def delete_incident(id):
     db.session.commit()
     return jsonify({'message': 'Deleted'}), 200
 
-# Add serialize method to model
 def serialize(self):
     return {
         "id": self.id,
