@@ -1,9 +1,8 @@
-# database.py (Fixed Version)
-from app import app, db  # Import both app and db from app.py
+from app import app, db  
 from models import Incident
 
 def seed_data():
-    # Wrap database operations in application context
+    
     with app.app_context():
         db.drop_all()
         db.create_all()
